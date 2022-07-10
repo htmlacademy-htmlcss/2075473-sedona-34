@@ -30,6 +30,17 @@ body {
   background-color: #fff;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -61,6 +72,7 @@ body {
   width: 1200px;
   margin: 0 auto;
 }
+
 .navigation-logo {
   width: 139px;
   margin-left: 70px;
@@ -70,8 +82,11 @@ body {
 .navigation-list {
   margin: 0;
   padding: 0;
+  list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
 }
+
 .navigation-menu {
   width: 390px;
   margin-right: 237px;
@@ -82,7 +97,15 @@ body {
   margin-right: 70px;
 }
 
+.navigation-user .navigation-link {
+  min-width: 20px;
+  min-height: 20px;
+}
+
+
 .navigation-link {
+  display: block;
+  padding: 20px 17px;
   font-weight: 700;
   font-size: 20px;
   text-decoration: none;
@@ -91,6 +114,7 @@ body {
 
 .main-container {
   flex-grow: 1;
+  padding-bottom: 93px;
 }
 
 .page-container {
@@ -99,17 +123,23 @@ body {
 }
 
 .announce {
+  display: flex;
+  margin-bottom: 63px;
   background-image: url("../images/backdrop/index.jpg"), url("../images/divider.svg");
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
 .announce-image {
   display: block;
   margin: 0 auto;
+  margin-top: 51px;
+  margin-bottom: 82px;
 }
 
 .preview-heading {
+  margin-top: 0;
+  margin-bottom: 31px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -118,6 +148,8 @@ body {
 }
 
 .preview-text {
+  margin: 0;
+  margin-bottom: 90px;
   text-align: center;
   color: #333333;
 }
@@ -128,7 +160,15 @@ body {
   display: flex;
 }
 
+.reason-container {
+  display: flex;
+  flex-direction: column;
+  margin: 92px 85px;
+  gap: 30px;
+}
+
 .reason-heading {
+  margin: 0;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -137,6 +177,7 @@ body {
 }
 
 .reason-text {
+  margin: 0;
   font-size: 18px;
   line-height: 21px;
   text-align: center;
@@ -147,9 +188,14 @@ body {
   justify-content: space-between;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .advantages-item {
+  display: flex;
+  flex-direction: column;
+  padding: 80px 85px;
+  gap: 30px;
   width: 400px;
 }
 
@@ -162,6 +208,7 @@ body {
 }
 
 .advantages-title {
+  margin: 0;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -170,6 +217,7 @@ body {
 }
 
 .advantages-description {
+  margin: 0;
   font-size: 18px;
   line-height: 21px;
   text-align: center;
@@ -185,13 +233,19 @@ body {
   justify-content: space-between;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .reason-other-item {
+  display: flex;
+  flex-direction: column;
+  padding: 102px 85px;
+  gap: 30px;
   width: 400px;
 }
 
 .reason-other {
+  margin-bottom: 91px;
   background-color: rgba(131, 179, 211, 0.12);
 }
 
@@ -200,6 +254,7 @@ body {
 }
 
 .reason-other-title {
+  margin: 0;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -208,6 +263,7 @@ body {
 }
 
 .reason-other-description {
+  margin: 0;
   font-size: 18px;
   line-height: 21px;
   text-align: center;
@@ -219,6 +275,8 @@ body {
 }
 
 .search-heading {
+  margin: 0;
+  margin-bottom: 29px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -226,6 +284,8 @@ body {
 }
 
 .search-text {
+  margin: 0;
+  margin-bottom: 56px;
   color: #333;
 }
 
@@ -234,40 +294,67 @@ body {
 }
 
 .mailing {
+  display: flex;
+  flex-direction: column;
+  padding: 94px 200px;
   color: #fff;
   text-align: center;
   background-image: url("../images/backdrop/index-footer.jpg");
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
+  margin-bottom: 40px;
 }
 
 .mailing-title {
+  margin: 0;
+  margin-bottom: 29px;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
 }
 
+.mailing-text {
+  margin: 0;
+  margin-bottom: 46px;
+}
+
 .page-footer-container {
   display: flex;
-  width: 1200px;
-  margin: 0 auto;
+  width: 1060px;
+  margin: 0 70px 30px;
+  justify-content: space-between;
+
+
 }
 
 .footer-social-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
   width: 180px;
-  margin-right: 200px;
+  list-style-type: none;
+}
+
+.footer-social-item {
+  min-width: 50px;
+  min-height: 40px;
 }
 
 .html-logo {
   width: 120px;
-  margin-left: auto;
-  margin-right: 70px;
+
+}
+
+.footer-contacts {
+  width: 720px;
+  text-align: center;
 }
 
 .footer-contacts-phone {
   font-size: 40px;
   line-height: 40px;
-  text-align: center;
+
   text-transform: uppercase;
   color: #000;
   text-decoration: none;
