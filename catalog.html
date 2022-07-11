@@ -47,7 +47,7 @@
       <div class="page-container">
         <header class="inner-header">
           <h1 class="inner-header-title">Гостиницы Седоны</h1>
-          <ul class="breadcrumbs">
+          <ul class="breadcrumbs-list">
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link" href="index.html">
                 <span class="visually-hidden">Главная</span>
@@ -113,23 +113,29 @@
         </header>
         <section class="results">
           <div class="sorting">
-            <h2 class="found">Найдено гостиниц: 38</h2>
+            <h2 class="found-title">Найдено гостиниц: 38</h2>
             <select class="select-control" aria-label="Сортировка">
               <option value="popular">Сначала дешевые</option>
               <option value="cheap">Сначала популярные</option>
               <option value="expensive">Сначала дорогие</option>
             </select>
-            <div class="view">
-              <a class="button button-light" href="#">
-                <span class="visually-hidden">Показать таблицу</span>
-              </a>
-              <a class="button" href="#">
-                <span class="visually-hidden">Показать слайдшоу</span>
-              </a>
-              <a class="button" href="#">
-                <span class="visually-hidden">Показать список</span>
-              </a>
-            </div>
+            <ul class="view-list">
+              <li class="view-item">
+                <a class="button button-light" href="#">
+                  <span class="visually-hidden">Показать таблицу</span>
+                </a>
+              </li>
+              <li class="view-item">
+                <a class="button" href="#">
+                  <span class="visually-hidden">Показать слайдшоу</span>
+                </a>
+              </li>
+              <li class="view-item">
+                <a class="button" href="#">
+                  <span class="visually-hidden">Показать список</span>
+                </a>
+              </li>
+            </ul>
           </div>
           <ul class="hotel-list">
             <li class="hotel-card">
@@ -170,7 +176,7 @@
             </li>
           </ul>
           <div class="pagination-container">
-            <ul class="pagination">
+            <ul class="pagination-list">
               <li class="pagination-item">
                 <a class="pagination-link pagination-current button">1</a>
               </li>
@@ -190,8 +196,8 @@
                 <a class="pagination-link button" href="#">10</a>
               </li>
             </ul>
-            <div class="quantity">
-              <p class="regulation">Гостиниц на странице:</p>
+            <div class="quantity-container">
+              <p class="regulation-text">Гостиниц на странице:</p>
               <select class="select-regulation">
                 <option value="four-hotels">4</option>
                 <option value="one-hotel">1</option>

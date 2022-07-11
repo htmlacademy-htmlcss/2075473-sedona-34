@@ -114,7 +114,7 @@ body {
 
 .main-container {
   flex-grow: 1;
-  padding-bottom: 93px;
+  margin-bottom: 93px;
 }
 
 .page-container {
@@ -360,7 +360,14 @@ body {
   text-decoration: none;
 }
 
+.main-inner {
+  margin-bottom: 25px;
+}
+
 .inner-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 55px;
   background-image: url("../images/backdrop/catalog.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -370,6 +377,21 @@ body {
 .inner-header-title {
   font-size: 60px;
   line-height: 78px;
+  margin: 0;
+  margin-top: 35px;
+  margin-bottom: 10px;
+  margin-left: 70px;
+}
+
+.breadcrumbs-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.breadcrumbs-item {
+  margin-right: 26px;
 }
 
 .breadcrumbs-link {
@@ -381,6 +403,12 @@ body {
   font-weight: 700;
   font-size: 20px;
   text-transform: capitalize;
+}
+
+.catalog-filter-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .control {
@@ -403,13 +431,13 @@ body {
 
 .sorting {
   display: flex;
+  margin: 0 72px 56px;
 }
 
-.found {
+.found-title {
+  margin: 0;
   width: 370px;
-  margin-left: 72px;
   margin-right: 191px;
-
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
@@ -423,9 +451,26 @@ body {
   color: #333;
 }
 
-.view {
-  width: 160px;
-  margin-right: 71px;
+.view-list {
+  margin-left: auto;
+  min-width: 160px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.view-item {
+  width: 48px;
+  height: 48px;
+  margin-right: 8px;
+
+}
+
+.view-item:nth-child(3n) {
+  margin-right: 0;
 }
 
 .hotel-list {
@@ -433,8 +478,10 @@ body {
   justify-content: space-between;
   margin: 0;
   padding: 0;
+  list-style-type: none;
   margin-left: 73px;
   margin-right: 73px;
+  margin-bottom: 96px;
   flex-wrap: wrap;
 }
 
@@ -469,22 +516,31 @@ body {
 
 .pagination-container {
   display: flex;
+  justify-content: space-between;
   width: 1056;
   margin-left: 73px;
   margin-right: 71px;
 }
 
-.pagination {
+.pagination-list {
+  display: flex;
   margin: 0;
   padding: 0;
+  list-style-type: none;
   width: 400px;
-  margin-right: 270px;
 }
 
-.quantity {
+.pagination-item {
+  width: 60px;
+  height: 60px;
+}
+
+.pagination-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.quantity-container {
   display: flex;
-  width: 386px;
-  margin-right: 71px;
 }
 
 .pagination-current {
@@ -492,13 +548,16 @@ body {
   background-color: #F2F2F2;
 }
 
-.regulation {
+.regulation-text {
+  margin: 0;
+  margin-right: 51px;
   font-size: 18px;
   line-height: 21px;
   color: #333;
 }
 
 .select-regulation {
+  width: 160px;
   font-size: 18px;
   line-height: 21px;
   color: #333;
