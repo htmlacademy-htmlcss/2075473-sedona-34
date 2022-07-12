@@ -444,6 +444,7 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  align-self: center;
 }
 
 .select-control {
@@ -469,7 +470,6 @@ body {
   width: 48px;
   height: 48px;
   margin-right: 8px;
-
 }
 
 .view-item:nth-child(3n) {
@@ -477,32 +477,42 @@ body {
 }
 
 .hotel-list {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
   margin: 0;
   padding: 0;
   list-style-type: none;
   margin-left: 73px;
-  margin-right: 73px;
+  margin-right: 71px;
   margin-bottom: 96px;
-  flex-wrap: wrap;
+  column-gap: 18px;
 }
 
 .hotel-card {
-  width: 340px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  padding: 20px;
 }
 
 .hotel-card-link {
   text-decoration: none;
 }
+.hotel-card-content {
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  gap: 16px 20px;
+}
 
 .hotel-card-title {
+  margin: 0;
   font-size: 24px;
   line-height: 28px;
   color: #000;
 }
 
 .hotel-card-price {
+  margin: 0;
   font-size: 18px;
   line-height: 21px;
   color: #333;
@@ -542,6 +552,8 @@ body {
   box-sizing: border-box;
   width: 60px;
   height: 60px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .quantity-container {
@@ -559,6 +571,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #333;
+  align-self: center;
 }
 
 .select-regulation {
