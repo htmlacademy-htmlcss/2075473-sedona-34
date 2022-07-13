@@ -19,6 +19,8 @@ html {
 }
 
 body {
+  position: relative;
+  top: -10px;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -50,6 +52,7 @@ body {
 }
 
 .button {
+  display: inline-block;
   font-family: inherit;
   font-weight: 700;
   font-size: 20px;
@@ -58,10 +61,18 @@ body {
   text-decoration: none;
   text-align: center;
   background-color: #82B3D3;
+  border: none;
+  border-radius: 4px;
   color: #fff;
+  cursor: pointer;
+  width: 574px;
+  padding: 12px 15px;
 }
 
 .button-small {
+  width: 130px;
+  height: 20px;
+  padding: 9px 15px;
   font-size: 16px;
   line-height: 20px;
   background-color: #756157;
@@ -74,6 +85,8 @@ body {
 }
 
 .navigation-logo {
+  position: relative;
+  top: 10px;
   width: 139px;
   margin-left: 70px;
   margin-right: 30px;
@@ -82,14 +95,16 @@ body {
 .navigation-list {
   margin: 0;
   padding: 0;
+  padding-top: 10px;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .navigation-menu {
   width: 390px;
-  margin-right: 237px;
+  margin-right: 200px;
 }
 
 .navigation-user {
@@ -102,8 +117,29 @@ body {
   min-height: 20px;
 }
 
+.navigation-item-favorite {
+  position: relative;
+  margin-right: 20px;
+}
+
+.navigation-item-favorite::after {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 30px;
+  top: 14px;
+  background: #7DB54F;
+  border-radius: 10px;
+  content: "12";
+  font-size: 10px;
+  line-height: 20px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
 
 .navigation-link {
+  position: relative;
   display: block;
   padding: 20px 17px;
   font-weight: 700;
@@ -111,6 +147,26 @@ body {
   text-decoration: none;
   color: inherit;
 }
+
+.navigation-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.navigation-link-current::before {
+  position: absolute;
+  right: 17px;
+  bottom: -1px;
+  left: 17px;
+  height: 2px;
+  background-color: #756257;
+  content: "";
+}
+
 
 .main-container {
   flex-grow: 1;
@@ -125,10 +181,9 @@ body {
 .announce {
   display: flex;
   margin-bottom: 63px;
-  background-color:peru;
-  background-image: url("../images/backdrop/index.jpg"), url("../images/divider.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: peru;
+  background: url("../images/divider.svg") bottom / 1200px 57px no-repeat,
+    url("../images/backdrop/index.jpg") center / cover no-repeat;
 }
 
 .announce-image {
@@ -137,6 +192,7 @@ body {
   margin-top: 51px;
   margin-bottom: 82px;
 }
+
 
 .preview-heading {
   margin-top: 0;
@@ -195,16 +251,31 @@ body {
 .advantages-item {
   display: flex;
   flex-direction: column;
-  padding: 80px 85px;
+  padding: 182px 85px 81px;
   gap: 30px;
   width: 400px;
 }
 
 .advantages-title-housing {
+  background-image: url("../images/advantage/advantage-icon-housing.svg");
+  background-repeat: no-repeat;
+  background-size: 75px 72px;
+  background-position: center top 80px;
   background-color: rgba(131, 179, 211, 0.12);
 }
 
+.advantages-item-food {
+  background-image: url("../images/advantage/advantage-icon-food.svg");
+  background-repeat: no-repeat;
+  background-size: 75px 72px;
+  background-position: center top 80px;
+}
+
 .advantages-title-souvenirs {
+  background-image: url("../images/advantage/advantage-icon-souvenirs.svg");
+  background-repeat: no-repeat;
+  background-size: 75px 72px;
+  background-position: center top 80px;
   background-color: rgba(131, 179, 211, 0.12);
 }
 
@@ -320,6 +391,12 @@ body {
   margin-bottom: 46px;
 }
 
+.mailing-button {
+  width: 200px;
+  padding: 12px 15px;
+  border-radius: 0px 10px 10px 0px;
+}
+
 .page-footer-container {
   display: flex;
   width: 1060px;
@@ -391,6 +468,9 @@ body {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  background-image: url("../images/arrow/arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .breadcrumbs-item {
@@ -420,11 +500,14 @@ body {
 }
 
 .button-apply {
+  width: 160px;
+  padding: 14px 15px;
   font-size: 16px;
   line-height: 20px;
 }
 
 .button-reset {
+  width: 15px;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -444,11 +527,12 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  align-self: center;
 }
 
 .select-control {
   width: 290px;
-  margin-right: 78px;
+  margin-right: 30px;
   font-size: 18px;
   line-height: 21px;
   color: #333;
@@ -466,55 +550,97 @@ body {
 }
 
 .view-item {
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
   width: 48px;
   height: 48px;
   margin-right: 8px;
+}
 
+.view-item-current {
+  border: 2px solid #000000;
 }
 
 .view-item:nth-child(3n) {
   margin-right: 0;
 }
 
+.view-link {
+  position: relative;
+}
+
+.view-icon {
+  position: absolute;
+  top: 17px;
+  left: 16px;
+  margin: auto;
+}
+
 .hotel-list {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
   margin: 0;
   padding: 0;
   list-style-type: none;
   margin-left: 73px;
-  margin-right: 73px;
+  margin-right: 71px;
   margin-bottom: 96px;
-  flex-wrap: wrap;
+  column-gap: 18px;
 }
 
 .hotel-card {
-  width: 340px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  padding: 20px;
 }
 
 .hotel-card-link {
   text-decoration: none;
 }
 
+.hotel-card-content {
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  gap: 16px 20px;
+}
+
 .hotel-card-title {
+  margin: 0;
   font-size: 24px;
   line-height: 28px;
   color: #000;
 }
 
 .hotel-card-price {
+  margin: 0;
   font-size: 18px;
   line-height: 21px;
   color: #333;
 }
 
 .hotel-card-button {
+  width: 110px;
   font-size: 16px;
   line-height: 20px;
 }
 
-.button-choose {
+.button-choose-current {
   background-color: #7DB54F;
+}
+
+.button-choose {
+  background-color: #82B3D3;
+}
+
+.button-rating {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #333333;
+  background-color: #F2F2F2;
+  background-image: url(../images/star.svg);
+
 }
 
 .pagination-container {
@@ -542,6 +668,8 @@ body {
   box-sizing: border-box;
   width: 60px;
   height: 60px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .quantity-container {
@@ -559,6 +687,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #333;
+  align-self: center;
 }
 
 .select-regulation {
